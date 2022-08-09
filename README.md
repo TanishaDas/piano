@@ -16,31 +16,46 @@ ___
  This button closes the window.
 ___ 
 ## How does this work?
+
 1.After running the code
 
 ![image](https://user-images.githubusercontent.com/76507491/183615464-c4f339f8-29c6-4455-b470-75d29f63fca7.png)
-___
+
   
 2. On pressing the start button it allows us to write the name of the song/(or whatever you may like) on the terminal it self, hence opens the piano(keys)window.
 
 ![image](https://user-images.githubusercontent.com/76507491/183610801-25683ac3-9575-48cd-8e8e-dd1a54515e6d.png)
 
-___
+
 3.the piano (octaves) window that it opens after the previous step.
 
 ![image](https://user-images.githubusercontent.com/76507491/183611077-a5319119-6969-4c50-89f3-501223d2ad2b.png)
 
-___
+
 4.Going back to the first page the _Play_ button funtion.
 
 ![image](https://user-images.githubusercontent.com/76507491/183611689-156a46e2-ee3c-4969-8a7c-22c113549dc9.png)
 
-___
+
 5.The _Play_ button pops open the following window.
 
 ![image](https://user-images.githubusercontent.com/76507491/183614886-58b7fca2-0a02-48bc-8afe-2c0cba5038df.png)
 
-___
+
 6.the jingle bells button opens the following window, and on pressing the _play_ button it produces the song
 
 ![image](https://user-images.githubusercontent.com/76507491/183613624-495624d1-08e4-49db-8b93-906dc1e004e8.png)
+
+7.the text file where every key you pressed gets saved.
+
+piano_pr.txt
+
+![image](https://user-images.githubusercontent.com/76507491/183619438-ab2da974-ea32-44ef-bfcc-126881d331f0.png)
+___
+
+## Contributors
+1.Swathi Rao
+
+2.Tanisha Das
+
+
