@@ -7,7 +7,7 @@
 
 static void play_c(GtkWidget* widget,gpointer data)
 {
-    FILE *fp=fopen("piano1.txt","a");
+    FILE *fp=fopen("piano_pr.txt","a");
     //char c[1]="C";
     fputc('C', fp);
     fputc('-', fp);
@@ -17,7 +17,7 @@ static void play_c(GtkWidget* widget,gpointer data)
 
 static void play_d(GtkWidget* widget,gpointer data)
 {
-    FILE *fp=fopen("piano1.txt","a");
+    FILE *fp=fopen("piano_pr.txt","a");
     fputc('D',fp);
     fputc('-',fp);
     Beep(587.330,500);
@@ -26,7 +26,7 @@ static void play_d(GtkWidget* widget,gpointer data)
 }
 static void play_e(GtkWidget* widget,gpointer data)
 {
-    FILE *fp=fopen("piano1.txt","a");
+    FILE *fp=fopen("piano_pr.txt","a");
     fputc('E',fp);
     fputc('-',fp);
     Beep(659.255,500);
@@ -34,7 +34,7 @@ static void play_e(GtkWidget* widget,gpointer data)
 }
 static void play_f(GtkWidget* widget,gpointer data)
 {
-    FILE *fp=fopen("piano1.txt","a");
+    FILE *fp=fopen("piano_pr.txt","a");
     fputc('F',fp);
     fputc('-',fp);
     Beep(698.456,500);
@@ -42,7 +42,7 @@ static void play_f(GtkWidget* widget,gpointer data)
 }
 static void play_g(GtkWidget* widget,gpointer data)
 {
-    FILE *fp=fopen("piano1.txt","a");
+    FILE *fp=fopen("piano_pr.txt","a");
     fputc('G',fp);
     fputc('-',fp);
     Beep(783.991,500);
@@ -50,7 +50,7 @@ static void play_g(GtkWidget* widget,gpointer data)
 }
 static void play_a(GtkWidget* widget,gpointer data)
 {
-    FILE *fp=fopen("piano1.txt","a");
+    FILE *fp=fopen("piano_pr.txt","a");
     fputc('A',fp);
     fputc('-',fp);
     Beep(880.000,500);
@@ -58,7 +58,7 @@ static void play_a(GtkWidget* widget,gpointer data)
 }
 static void play_b(GtkWidget* widget,gpointer data)
 {
-    FILE *fp=fopen("piano1.txt","a");
+    FILE *fp=fopen("piano_pr.txt","a");
     fputc('B',fp);
     fputc('-',fp);
     Beep(987.767,500);
@@ -66,43 +66,50 @@ static void play_b(GtkWidget* widget,gpointer data)
 }
 static void play_csharp(GtkWidget* widget, gpointer data)
 {
-    FILE *fp=fopen("piano1,txt","a");
+    FILE *fp=fopen("piano_pr.txt","a");
     fputc('C',fp);
     fputc('#',fp);
     fputc('-',fp);
     Beep(277.183,500);
+    fclose(fp);
+
 }
 static void play_dsharp(GtkWidget* widget, gpointer data)
 {
-    FILE *fp=fopen("piano1.txt","a");
+    FILE *fp=fopen("piano_pr.txt","a");
     fputc('D',fp);
     fputc('#',fp);
     fputc('-',fp);
     Beep(311.127,500);
+    fclose(fp);
+
 }
 static void play_fsharp(GtkWidget* widget, gpointer data)
 {
-    FILE *fp=fopen("piano1.txt","a");
+    FILE *fp=fopen("piano_pr.txt","a");
     fputc('F',fp);
     fputc('#',fp);
     fputc('-',fp);
     Beep(369.994,500);
+     fclose(fp);
 }
 static void play_gsharp(GtkWidget* widget, gpointer data)
 {
-    FILE *fp=fopen("piano1.txt","a");
+    FILE *fp=fopen("piano_pr.txt","a");
     fputc('G',fp);
     fputc('#',fp);
     fputc('-',fp);
     Beep(415.305 ,500);
+     fclose(fp);
 }
 static void play_asharp(GtkWidget* widget, gpointer data)
 {
-    FILE *fp=fopen("piano1.txt","a");
+    FILE *fp=fopen("piano_pr.txt","a");
     fputc('A',fp);
     fputc('#',fp);
     fputc('-',fp);
     Beep(466.164  ,500);
+     fclose(fp);
 }
 
 static void jbells(GtkWidget* widget,gpointer data)
@@ -385,7 +392,7 @@ static void play(GtkWidget* widget,gpointer data)
 
     GtkWidget *window4, *image3,*fixed3,*JB,*TTLS,*MHLL_play,*HBD_play;
     /*char name[100];
-    FILE *fp=fopen("piano1.txt","a");
+    FILE *fp=fopen("piano_pr.txt","a");
     //char c[1]="C";
     printf("enter the name of the song: ");
     fgets(name,sizeof(name),stdin);
@@ -399,7 +406,7 @@ static void play(GtkWidget* widget,gpointer data)
     //image3=gtk_image_new_from_file("C:/Users/swath/Documents/2ndSemCProject/test1/music.jpg");
     fixed3=gtk_fixed_new();
     gtk_container_add(GTK_CONTAINER(window4),fixed3);
-    //gtk_fixed_put(GTK_FIXED(fixed3),image3,500,500)
+    //gtk_fixed_put(GTK_FIXED(fixed3),fixed3,500,500)
 
     JB=gtk_button_new_with_label("Jingle Bells");
     TTLS=gtk_button_new_with_label("Twinkle Twinkle Little Star");
@@ -432,7 +439,7 @@ static void start_program(GtkWidget* widget,gpointer data)
     GtkWidget *window1,*image1,*fixed2,*c_but,*d_but,*e_but,*f_but,*g_but,*a_but,*b_but,*csharp_but,*dsharp_but,*gsharp_but,*fsharp_but,*asharp_but;
     GtkWidget *C,*D,*E,*F,*G,*A,*CSharp,*DSharp,*FSharp,*ASharp,*GSharp;
     char name[100];
-    FILE *fp=fopen("piano1.txt","w+");
+    FILE *fp=fopen("piano_pr.txt","w+");
     //char c[1]="C";
     printf("enter the name of the song: ");
     fgets(name,sizeof(name),stdin);
@@ -497,69 +504,9 @@ static void start_program(GtkWidget* widget,gpointer data)
 
 }
 
-static void saved_file(GtkWidget* widget,gpointer data){
-
-GtkWidget *window10,*image10,*fixed10,*c_but,*d_but,*e_but,*f_but,*g_but,*a_but,*b_but,*csharp_but,*dsharp_but,*gsharp_but,*fsharp_but,*asharp_but;
-    GtkWidget *C,*D,*E,*F,*G,*A,*CSharp,*DSharp,*FSharp,*ASharp,*GSharp;
-    window10=gtk_window_new(GTK_WINDOW_TOPLEVEL); //creating new window
-    image10=gtk_image_new_from_file("C:/Users/Satish Das/Desktop/Codeblocks-C/piano_0.jpg");
-    fixed10=gtk_fixed_new();
-    gtk_container_add(GTK_CONTAINER(window10),fixed10);
-
-gtk_container_add(GTK_CONTAINER(window10),fixed10);
-
-    c_but=gtk_button_new_with_label("C");
-    csharp_but=gtk_button_new_with_label("C#");
-    d_but=gtk_button_new_with_label("D");
-    dsharp_but=gtk_button_new_with_label("D#");
-    e_but=gtk_button_new_with_label("E");
-    f_but=gtk_button_new_with_label("F");
-    fsharp_but=gtk_button_new_with_label("F#");
-    g_but=gtk_button_new_with_label("G");
-    gsharp_but=gtk_button_new_with_label("G#");
-    a_but=gtk_button_new_with_label("A");
-    asharp_but=gtk_button_new_with_label("A#");
-    b_but=gtk_button_new_with_label("B");
-
-    gtk_container_add(GTK_CONTAINER(fixed10),image10);
-
-    //Place buttons A, B,C,D,E,F,G in positions
-    gtk_fixed_put(GTK_FIXED(fixed10),c_but,15,300);
-    gtk_fixed_put(GTK_FIXED(fixed10),d_but,110,300);
-    gtk_fixed_put(GTK_FIXED(fixed10),e_but,205,300);
-    gtk_fixed_put(GTK_FIXED(fixed10),f_but,295,300);
-    gtk_fixed_put(GTK_FIXED(fixed10),g_but,380,300);
-    gtk_fixed_put(GTK_FIXED(fixed10),a_but,475,300);
-    gtk_fixed_put(GTK_FIXED(fixed10),b_but,570,300);
-
-    //Place Sharp buttons : C, D, F, G, A in position
-    gtk_fixed_put(GTK_FIXED(fixed10),csharp_but,66,200);
-    gtk_fixed_put(GTK_FIXED(fixed10),dsharp_but,156,200);
-    gtk_fixed_put(GTK_FIXED(fixed10),fsharp_but,338,200);
-    gtk_fixed_put(GTK_FIXED(fixed10),gsharp_but,430,200);
-    gtk_fixed_put(GTK_FIXED(fixed10),asharp_but,521,200);
-
-    //Function to be called when button is pressed
-    g_signal_connect (c_but, "clicked", G_CALLBACK (play_c), NULL);
-    g_signal_connect (csharp_but, "clicked", G_CALLBACK (play_csharp), NULL);
-    g_signal_connect (d_but, "clicked", G_CALLBACK (play_d), NULL);
-    g_signal_connect (dsharp_but, "clicked", G_CALLBACK (play_dsharp), NULL);
-    g_signal_connect (e_but, "clicked", G_CALLBACK (play_e), NULL);
-    g_signal_connect (f_but, "clicked", G_CALLBACK (play_f), NULL);
-    g_signal_connect (fsharp_but, "clicked", G_CALLBACK (play_fsharp), NULL);
-    g_signal_connect (g_but, "clicked", G_CALLBACK (play_g), NULL);
-    g_signal_connect (gsharp_but, "clicked", G_CALLBACK (play_gsharp), NULL);
-    g_signal_connect (a_but, "clicked", G_CALLBACK (play_a), NULL);
-    g_signal_connect (asharp_but, "clicked", G_CALLBACK (play_asharp), NULL);
-    g_signal_connect (b_but, "clicked", G_CALLBACK (play_b), NULL);
-
-    gtk_widget_show_all(window10);
-    gtk_main();
 
 
 
-
-}
 
 int main(int argc,char **argv){
 
